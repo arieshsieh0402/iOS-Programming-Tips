@@ -1,4 +1,6 @@
-# 實作兩個頁面的 UIAlert 連接
+# Delegate
+
+## 實作兩個頁面的 UIAlert 連接
 
 ```swift
 
