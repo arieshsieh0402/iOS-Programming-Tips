@@ -40,6 +40,17 @@ class FirstViewController: UIViewController, AlertDelegate {
 import UIKit
 
 class SecondViewController: UIViewController, AlertDelegate {
+
+    weak var delegate: AlertDelegate?
+    
+    @IBAction func alertButtonTapped(_ sender: Any) {
+        showAlertOnFirstVC()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
     func showAlertOnFirstVC() {
         let alertController = UIAlertController(title: "第一個警告", message: "這是第一個警告訊息", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "確定", style: .default, handler: { [weak self] _ in
@@ -50,16 +61,6 @@ class SecondViewController: UIViewController, AlertDelegate {
         alertController.addAction(okAction)
         
         present(alertController, animated: true, completion: nil)
-    }
-    
-    weak var delegate: AlertDelegate?
-    
-    @IBAction func alertButtonTapped(_ sender: Any) {
-        showAlertOnFirstVC()
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
     }
 }
 ```
