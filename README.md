@@ -5,3 +5,4 @@ A repository full of iOS programming insights, tips, and code snippets
 
 - [Xcode](Xcode.md)
 - [Delegate](Delegate.md)
+- [Animation](Animation.md)
